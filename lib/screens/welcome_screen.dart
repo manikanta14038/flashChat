@@ -21,11 +21,10 @@ class _WelcomeScreenState extends State<WelcomeScreen> with SingleTickerProvider
     controller=AnimationController(
         duration: Duration(seconds: 2),
         vsync: this,
-      );
+      );  
     animation=CurvedAnimation(parent: controller,curve: Curves.decelerate);
     
     controller.forward();
-
     controller.addListener(() {
       setState(() { });
     });
